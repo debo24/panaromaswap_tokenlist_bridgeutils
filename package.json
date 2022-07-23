@@ -1,0 +1,75 @@
+{
+  "name": "panaromaswap_tokenlist_bridgeutils",
+  "prettier": {
+    "printWidth": 80,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debo24/panaromaswap_tokenlist_bridgeutils.git"
+  },
+  "publishConfig": {
+    "@debo24": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "analyze": "size-limit --why",
+    "build": "dts build",
+    "lint": "dts lint",
+    "prepare": "dts build",
+    "size": "size-limit",
+    "start": "dts watch",
+    "test": "dts test"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/jest": "^27.4.1",
+    "@types/lodash": "^4.14.179",
+    "panaromaswap_tokenlists": "^1.0.0",
+    "dts-cli": "^1.4.0",
+    "husky": "^7.0.4",
+    "size-limit": "^7.0.8",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "dts lint"
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "main": "dist/index",
+  "module": "dist/panaromaswap_tokenlist_bridgeutils.esm.js",
+  "size-limit": [
+    {
+      "limit": "10 KB",
+      "path": "dist/panaromaswap_tokenlist_bridgeutils.cjs.production.min.js"
+    },
+    {
+      "limit": "10 KB",
+      "path": "dist/panaromaswap_tokenlist_bridgeutils.esm.js"
+    }
+  ],
+  "typings": "dist/index",
+  "version": "1.0.8",
+  "dependencies": {
+    "@arbitrum/sdk": "^1.1.4",
+    "panaromaswap_sdkcore": "^1.0.0",
+    "axios": "^0.26.0",
+    "dotenv": "^16.0.1",
+    "ethers": "^5.6.5",
+    "lodash": "^4.17.21",
+    "web3": "^1.7.3"
+  }
+}
